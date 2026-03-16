@@ -357,9 +357,6 @@
     <script src="js/activation.js"></script>
     <script>
     (function () {
-        // ── Server URL for payment processing (stays on your PHP server) ──
-        var COMPLETE_URL = 'https://staging.family1st.io/family1st-io-v2/products/monthly-subscription_v1/complete.php'
-
         document.getElementById('footer-year').textContent = new Date().getFullYear();
 
         // ── Render cart from localStorage ─────────────────────────────
@@ -446,91 +443,6 @@
         // ── Shipping method toggle ─────────────────────────────────────
         document.querySelectorAll('input[name="shipping_method"]').forEach(function (radio) {
             radio.addEventListener('change', updateSummary);
-        });
-
-        // ── Shipping address toggle ────────────────────────────────────
-        document.getElementById('ship-different').addEventListener('change', function () {
-            document.getElementById('shipping-address-fields').style.display = this.checked ? '' : 'none';
-        });
-
-        // ── Form validation helper ─────────────────────────────────────
-        function getField(id) { return document.getElementById(id).value.trim(); }
-
-        function showError(msg) {
-            var el = document.getElementById('form-error');
-            el.textContent = msg;
-            el.hidden = false;
-            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        function hideError() { document.getElementById('form-error').hidden = true; }
-
-        // ── Place order → POST to family1st.io server ─────────────────
-        document.getElementById('checkout-btn').addEventListener('click', function () {
-            hideError();
-
-            var name           = getField('full-name');
-            var email          = getField('email');
-            var phone          = getField('phone');
-            var address        = getField('address');
-            var city           = getField('city');
-            var state          = getField('state');
-            var zip            = getField('zip');
-            var cardNumber     = getField('cardNumber');
-            var cardExpiry     = getField('cardExpiry');
-            var cardCvv        = getField('cardCvv');
-            var cardholderName = getField('cardholderName');
-
-            if (!name || !email || !phone || !address || !city || !state || !zip) {
-                return showError('Please fill in all required fields.');
-            }
-            if (!cardNumber || !cardExpiry || !cardCvv || !cardholderName) {
-                return showError('Please fill in all payment fields.');
-            }
-
-            var items   = Cart.getItems();
-            if (items.length === 0) return showError('Your cart is empty.');
-
-            var totals   = Cart.getTotals();
-            var shipping = getShipping();
-
-            // Show spinner
-            document.getElementById('btn-text').hidden   = true;
-            document.getElementById('btn-spinner').hidden = false;
-            document.getElementById('checkout-btn').disabled = true;
-
-            // POST to your PHP server
-            fetch(COMPLETE_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    customer: { name: name, email: email, phone: phone,
-                                address: address, city: city, state: state, zip: zip },
-                    card: { number: cardNumber, expiry: cardExpiry, cvv: cardCvv, holder: cardholderName },
-                    cart: { items: items, deviceTotal: totals.deviceTotal,
-                            monthlyTotal: totals.monthlyTotal, shipping: shipping,
-                            grandTotal: totals.deviceTotal + shipping }
-                })
-            })
-            .then(function (res) { return res.json(); })
-            .then(function (data) {
-                Cart.clear();
-                // Redirect to success page with response params
-                var params = new URLSearchParams({
-                    status:   data.status || 'success',
-                    orderToken: data.orderToken || ''
-                });
-                if (data.successful !== undefined) params.set('successful', data.successful);
-                if (data.failed !== undefined) params.set('failed', data.failed);
-                window.location.href = 'success.html?' + params.toString();
-            })
-            .catch(function (err) {
-                console.error(err);
-                showError('Payment failed. Please try again or contact support.');
-                document.getElementById('btn-text').hidden   = false;
-                document.getElementById('btn-spinner').hidden = true;
-                document.getElementById('checkout-btn').disabled = false;
-            });
         });
 
         // ── Mobile menu ────────────────────────────────────────────────
