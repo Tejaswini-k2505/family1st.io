@@ -365,6 +365,11 @@
         var checkoutGrid  = document.getElementById('checkout-grid');
         var fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 });
 
+        // Fallback product images in case localStorage items are missing the image field
+        var productImages = {
+            'plug-in-obd-tracker': 'https://go.family1st.io/cdn/shop/files/ProductImage_596x_crop_center_a32a6195-e75b-4ef3-9efe-0b8ca96fc82a.webp?v=1740512507'
+        };
+
         function getShipping() {
             var checked = document.querySelector('input[name="shipping_method"]:checked');
             return (checked && checked.value === 'overnight') ? 45.00 : 0;
@@ -393,13 +398,14 @@
             checkoutGrid.style.display = '';
 
             items.forEach(function (item) {
+                var imgSrc = item.image || productImages[item.productId] || '';
                 var div = document.createElement('div');
                 div.className = 'order-product';
                 div.setAttribute('data-product-id', item.productId);
                 div.setAttribute('data-unit-price', item.price);
                 div.innerHTML =
                     '<div class="order-product__image">' +
-                        '<img src="' + item.image + '" alt="' + item.name + '" width="120" height="120" decoding="async">' +
+                        '<img src="' + imgSrc + '" alt="' + item.name + '" width="120" height="120" decoding="async">' +
                     '</div>' +
                     '<div class="order-product__info">' +
                         '<h3 class="order-product__name">' + item.name + '</h3>' +
@@ -438,11 +444,6 @@
                 Cart.removeItem(productId);
             }
             renderCart();
-        });
-
-        // ── Shipping method toggle ─────────────────────────────────────
-        document.querySelectorAll('input[name="shipping_method"]').forEach(function (radio) {
-            radio.addEventListener('change', updateSummary);
         });
 
         // ── Mobile menu ────────────────────────────────────────────────

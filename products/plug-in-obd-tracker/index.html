@@ -70,9 +70,8 @@
                 <div class="page-container">
                     <div class="product-hero__grid">
                         <figure class="product-gallery">
-                            <div class="product-gallery__thumbs" id="gallery-thumbs"></div>
                             <div class="product-gallery__frame">
-                                <img id="product-gallery-main" src="https://go.family1st.io/cdn/shop/files/ProductImage_596x_crop_center_a32a6195-e75b-4ef3-9efe-0b8ca96fc82a.webp?v=1740512507" alt="Plug-in OBD Tracker" width="500" height="500" decoding="async">
+                                <img src="https://go.family1st.io/cdn/shop/files/ProductImage_596x_crop_center_a32a6195-e75b-4ef3-9efe-0b8ca96fc82a.webp?v=1740512507" alt="Plug-in OBD Tracker" width="500" height="500" decoding="async">
                             </div>
                         </figure>
 
@@ -91,7 +90,7 @@
                             </div>
                             <div class="product-info__price">
                                 <span class="price-value">$55.99</span>
-                                <!-- <span class="price-sub">+ from $21.95/mo</span> -->
+                                <span class="price-sub">+ from $21.95/mo</span>
                             </div>
                             <p class="product-info__tagline">Lowest GPS subscription in the US</p>
                             <p class="product-info__description">The Family1st Plug-in OBD Tracker is the ultimate set-it-and-forget-it solution. Simply plug it into any vehicle's OBD-II port (standard on all cars since 1996) and you're tracking in seconds. No batteries to charge, no installation tools needed. Get real-time location, detailed driving behavior reports, vehicle diagnostics, and trip history — all from your phone.</p>
@@ -324,15 +323,6 @@
 
     <style>
         .product-hero__grid { align-items: flex-start; }
-        .product-gallery { display: flex; gap: 0.75rem; align-items: flex-start; position: sticky; top: 1rem; align-self: flex-start; }
-        .product-gallery__thumbs { display: flex; flex-direction: column; gap: 0.5rem; flex-shrink: 0; }
-        .product-gallery__thumb { padding: 0; border: 2px solid transparent; border-radius: 6px; cursor: pointer; overflow: hidden; background: none; }
-        .product-gallery__thumb:hover { border-color: #ccc; }
-        .product-gallery__thumb.is-active { border-color: #2563eb; }
-        .product-gallery__thumb img { display: block; width: 80px; height: 80px; object-fit: cover; }
-        .product-gallery__frame { flex: 1; min-width: 0; position: relative; }
-        .product-gallery__frame img { max-width: 100%; height: auto; display: block; }
-        @media (max-width: 640px) { .product-gallery { flex-direction: column-reverse; position: static; } .product-gallery__thumbs { flex-direction: row; flex-wrap: wrap; } }
     </style>
 
     <script src="js/cart.js"></script>
@@ -343,32 +333,12 @@
             id: 'plug-in-obd-tracker',
             name: 'Plug-in OBD Tracker',
             price: 55.99,
-            monthlyPrice: 21.95
+            monthlyPrice: 21.95,
+            image: 'https://go.family1st.io/cdn/shop/files/ProductImage_596x_crop_center_a32a6195-e75b-4ef3-9efe-0b8ca96fc82a.webp?v=1740512507'
         };
 
         // ── Footer year ────────────────────────────────────────────────
         document.getElementById('footer-year').textContent = new Date().getFullYear();
-
-        // ── Gallery thumbnails ─────────────────────────────────────────
-        var thumbsContainer = document.getElementById('gallery-thumbs');
-        var mainImg = document.getElementById('product-gallery-main');
-        mainImg.src = product.gallery[0];
-        mainImg.alt = product.name;
-
-        product.gallery.forEach(function (src, i) {
-            var btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'product-gallery__thumb' + (i === 0 ? ' is-active' : '');
-            btn.setAttribute('data-index', i);
-            btn.setAttribute('aria-label', 'View image ' + (i + 1));
-            btn.innerHTML = '<img src="' + src + '" alt="' + product.name + ' view ' + (i + 1) + '" width="80" height="80" loading="lazy" decoding="async">';
-            btn.addEventListener('click', function () {
-                mainImg.src = src;
-                document.querySelectorAll('.product-gallery__thumb').forEach(function (b) { b.classList.remove('is-active'); });
-                btn.classList.add('is-active');
-            });
-            thumbsContainer.appendChild(btn);
-        });
 
         // ── Quantity selector ──────────────────────────────────────────
         var qtyEl = document.getElementById('product-qty');
