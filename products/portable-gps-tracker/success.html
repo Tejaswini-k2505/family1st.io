@@ -134,6 +134,11 @@
         try { successfulSubs = JSON.parse(decodeURIComponent(params.get('successful_subs') || '[]')); } catch(e) {}
         try { failedSubs     = JSON.parse(decodeURIComponent(params.get('failed_subs') || '[]'));     } catch(e) {}
 
+        // ── Strip query params from the URL bar ─────────────────────
+        if (window.location.search) {
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+
         // ── Build page HTML ───────────────────────────────────────────
         var page = document.getElementById('success-page');
         var html = '';
