@@ -7,7 +7,7 @@
     'use strict';
 
     // ── Server endpoints (PHP stays on your server) ──────────────────
-    var SERVER_BASE    = 'https://staging.family1st.io';
+    var SERVER_BASE    = 'http://staging.family1st.io';
     var COMPLETE_URL   = SERVER_BASE + '/family1st-io-v2/products/monthly-subscription_v1/complete.php';
     var SEND_EMAIL_URL = SERVER_BASE + '/family1st-io-v2/products/monthly-subscription_v1/data/sendEmail.php';
 
