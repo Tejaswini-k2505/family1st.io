@@ -7,9 +7,9 @@
     'use strict';
 
     // ── Server endpoints (PHP stays on your server) ──────────────────
-    var SERVER_BASE    = 'http://staging.family1st.io';
-    var COMPLETE_URL   = SERVER_BASE + '/family1st-io-v2/products/monthly-subscription_v1/complete.php';
-    var SEND_EMAIL_URL = SERVER_BASE + '/family1st-io-v2/products/monthly-subscription_v1/data/sendEmail.php';
+    var SERVER_BASE    = 'https://staging.family1st.io';
+    var COMPLETE_URL   = 'https://staging.family1st.io/family1st-io-v2/products/monthly-subscription_v1/complete.php';
+    var SEND_EMAIL_URL = 'https://staging.family1st.io/family1st-io-v2/products/monthly-subscription_v1/data/sendEmail.php';
 
     // ── Stripe publishable key ────────────────────────────────────────
     // Stripe.setPublishableKey('pk_live_ZOC4YsmfZWPKi73HTChGMM4N00XQHhEUBg');
