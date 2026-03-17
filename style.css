@@ -691,7 +691,7 @@ img {
 
 .feature-card {
     position: relative;
-    padding: 2rem;
+    /* padding: 2rem; */
     border-radius: 1rem;
     border: 1px solid var(--slate-200);
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -742,8 +742,8 @@ img {
     opacity: 1;
   }
 .feature-icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    /* width: 3.5rem;
+    height: 3.5rem; */
     border-radius: 0.75rem;
     display: flex;
     align-items: center;
@@ -751,6 +751,10 @@ img {
     margin-bottom: 1.25rem;
 }
 
+.feature-icon img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
 .feature-icon svg {
     width: 1.75rem;
     height: 1.75rem;
@@ -762,6 +766,7 @@ img {
     font-weight: 600;
     color: var(--slate-900);
     margin: 0 0 0.5rem 0;
+    padding: 0 30px;
 }
 
 .feature-card p {
@@ -769,6 +774,7 @@ img {
     color: var(--slate-600);
     margin: 0;
     line-height: 1.6;
+    padding: 0 30px 30px;
 }
 
 /* Use cases */
@@ -872,6 +878,158 @@ img {
 .btn-outline-slate:hover {
     background: lab(97.7008% 1.53738 5.90646);
 }
+
+ /* ============================================================
+    HOW IT WORKS — Vertical timeline
+    ============================================================ */
+.timeline {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #e0e7ff, #4f46e5, #e0e7ff);
+}
+
+@media (min-width: 768px) {
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-1px);
+    }
+}
+
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 48px;
+    position: relative;
+    align-items: center;
+}
+
+/* Mobile: always dot, then text, then image */
+.timeline-item .timeline-dot { order: 1; }
+.timeline-item .timeline-content { order: 2; }
+.timeline-item .timeline-media { order: 3; }
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        gap: 7rem;
+        flex-wrap: nowrap;
+    }
+
+    /* Odd: text left, image right */
+    .timeline-item:nth-child(odd) .timeline-content {
+        padding-right: 24px;
+        padding-left: 0;
+        text-align: right;
+        order: 1;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-media {
+        order: 3;
+    }
+
+    /* Even: image left, text right */
+    .timeline-item:nth-child(even) .timeline-media {
+        order: 1;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        padding-left: 24px;
+        padding-right: 0;
+        text-align: left;
+        order: 3;
+    }
+}
+
+.timeline-dot {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .timeline-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        order: 2;
+    }
+}
+
+.timeline-content {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (min-width: 768px) {
+    .timeline-content {
+        width: calc(50% - 56px);
+        max-width: calc(50% - 56px);
+        box-sizing: border-box;
+    }
+}
+
+.timeline-media {
+    flex: 1;
+    min-width: 0;
+}
+
+.timeline-media img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--gray-100);
+}
+
+@media (min-width: 768px) {
+    .timeline-media {
+        width: calc(50% - 56px);
+        max-width: calc(50% - 56px);
+        box-sizing: border-box;
+    }
+}
+
+.timeline-content h3 {
+    color: var(--gray-900);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.75rem 0;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: var(--slate-600);
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
 /* How it works */
 .steps-grid {
     display: grid;
@@ -1042,9 +1200,12 @@ img {
 }
 
 .product-card .price {
-    font-size: 1.5rem;
-    font-weight: 700;
     margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #4f46e5;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
 }
 
 .product-card .price-note {
