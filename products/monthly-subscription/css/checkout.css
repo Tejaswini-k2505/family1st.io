@@ -1,5 +1,31 @@
 /* Checkout page styles */
-
+:root {
+    --color-slate-50: #f8fafc;
+    --color-slate-200: #e2e8f0;
+    --color-slate-300: #cbd5e1;
+    --color-slate-400: #94a3b8;
+    --color-slate-500: #64748b;
+    --color-slate-600: #475569;
+    --color-slate-700: #334155;
+    --color-slate-900: #0f172a;
+    --color-blue-50: #eff6ff;
+    --color-blue-100: #dbeafe;
+    --color-blue-200: #bfdbfe;
+    --color-blue-600: #2563eb;
+    --color-blue-700: #1d4ed8;
+    --color-blue-900: #1e3a8a;
+    --color-amber-400: #fbbf24;
+    --color-emerald-500: #10b981;
+    --color-emerald-600: #059669;
+    --color-white: #ffffff;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --page-max: 80rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.25rem;
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
 .checkout-section {
     padding: 2.5rem 0 4rem;
 }
@@ -34,7 +60,7 @@
 .checkout-title {
     font-size: 1.875rem;
     font-weight: 700;
-    color: var(--color-slate-900);
+    color: #0f172a;
     margin: 0 0 2rem;
 }
 
@@ -62,7 +88,7 @@
 .checkout-subtitle {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-slate-900);
+    color: #0f172a;
     margin: 0 0 1.25rem;
 }
 
@@ -93,7 +119,7 @@
     font-family: var(--font-sans);
     font-size: 1rem;
     color: var(--color-slate-900);
-    background: var(--color-white);
+    background: rgba(255,255,255,.03);
     border: 1px solid var(--color-slate-300);
     border-radius: var(--radius-lg);
     padding: 0.75rem 1rem;
@@ -193,9 +219,9 @@
 
 /* Order Summary */
 .order-summary {
-    background: var(--color-slate-50);
-    border: 1px solid var(--color-slate-200);
-    border-radius: var(--radius-2xl);
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
     padding: 1.75rem;
     position: sticky;
     top: 6rem;
@@ -244,7 +270,7 @@
 .order-product__name {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-slate-900);
+    color: #0f172a;
     margin: 0 0 0.25rem;
 }
 .order-product__qty-badge-container {
@@ -374,7 +400,7 @@
 .shipping-option__name {
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-slate-900);
+    color: #0f172a;
 }
 
 .shipping-option__desc {
@@ -385,7 +411,7 @@
 .shipping-option__price {
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-slate-900);
+    color: #0f172a;
     flex-shrink: 0;
 }
 
@@ -408,7 +434,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 0.9375rem;
-    color: var(--color-slate-700);
+    color: #0f172a;
 }
 
 .order-pricing__free {
@@ -421,7 +447,7 @@
     border-top: 1px solid var(--color-slate-200);
     font-size: 1.125rem;
     font-weight: 700;
-    color: var(--color-slate-900);
+    color: #0f172a;
 }
 
 /* Subscription note */
@@ -464,7 +490,7 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.8125rem;
-    color: var(--color-slate-600);
+    color: #0f172a;
 }
 
 .order-guarantees li svg {
@@ -483,7 +509,7 @@
 .order-product__price {
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--color-slate-900);
+    color: #0f172a;
     margin: 0.25rem 0 0;
 }
 
@@ -559,6 +585,7 @@
     justify-content: center;
     width: 32px;
     height: 28px;
+    border: 1px solid #cbd5e1;
     border-top: 1px solid var(--color-slate-300);
     border-bottom: 1px solid var(--color-slate-300);
     background: var(--color-white);
@@ -771,6 +798,7 @@
 
 .success-apps {
     margin: 1.5rem 0;
+    color: #0f172a;
 }
 
 .success-apps__links {
@@ -785,7 +813,12 @@
     padding: 0.5rem 1rem;
     border: none;
 }
-
+.btn--primary {
+    background: #2563eb;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
 .success-continue {
     margin-top: 1.5rem;
     border: none;
