@@ -6,9 +6,31 @@
     <title>Order Confirmed — Family1st GPS</title>
     <meta name="robots" content="noindex,nofollow">
     <link rel="icon" href="/favicon.ico" sizes="256x256" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="icon" href="https://family1st.io/wp-content/uploads/2018/01/logo-ff1st-100x100.png" sizes="32x32" />
+    <link rel="stylesheet" href="css/style_html.css">
+    <link rel="stylesheet" href="css/checkout_new.css">
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+    <style>
+        .btn--primary {
+            background: #2563eb;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+        .success-apps {
+            color: #0f172a;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window._mfq = window._mfq || [];
+        (function() {
+        var mf = document.createElement("script");
+        mf.type = "text/javascript"; mf.defer = true;
+        mf.src = "//cdn.mouseflow.com/projects/f13510f8-cf73-4dca-afce-7fab7cdf95a9.js";
+        document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+    </script>
 </head>
 <body>
 
@@ -25,8 +47,8 @@
             </a>
             <nav class="nav-links">
                 <a href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a>
+                <a href="../../products">Products</a>
+                <a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a>
                 <a href="https://family1st.io/blogs/">Blog</a>
                 <a href="https://family1st.io/faq">FAQ</a>
             </nav>
@@ -39,8 +61,8 @@
         <div id="mobile-menu" class="mobile-menu">
             <div class="mobile-menu-inner">
                 <a href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a>
+                <a href="../../products">Products</a>
+                <a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a>
                 <a href="https://family1st.io/blogs/">Blog</a>
                 <a href="https://family1st.io/faq">FAQ</a>
             </div>
@@ -77,7 +99,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="../../products">Products</a></li>
-                        <li><a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a></li>
+                        <li><a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a></li>
                         <li><a href="https://family1st.io/blogs/">Blog</a></li>
                         <li><a href="https://family1st.io/faq">FAQ</a></li>
                         <li><a href="#" rel="noopener noreferrer">Shop</a></li>
@@ -116,117 +138,117 @@
 
     <script src="js/cart.js"></script>
     <script>
-    (function () {
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-
-        // Clear cart on success page load
-        Cart.clear();
-
-        // ── Read URL params (replaces PHP $_GET) ──────────────────────
-        var params          = new URLSearchParams(window.location.search);
-        var isPartial       = params.get('status') === 'partial';
-        var successfulCount = parseInt(params.get('successful')) || 0;
-        var failedCount     = parseInt(params.get('failed')) || 0;
-        var orderToken      = params.get('orderToken') || '';
-        var successfulSubs  = [];
-        var failedSubs      = [];
-
-        try { successfulSubs = JSON.parse(decodeURIComponent(params.get('successful_subs') || '[]')); } catch(e) {}
-        try { failedSubs     = JSON.parse(decodeURIComponent(params.get('failed_subs') || '[]'));     } catch(e) {}
-
-        // ── Strip query params from the URL bar ─────────────────────
-        if (window.location.search) {
-            window.history.replaceState(null, '', window.location.pathname);
-        }
-
-        // ── Build page HTML ───────────────────────────────────────────
-        var page = document.getElementById('success-page');
-        var html = '';
-
-        if (isPartial) {
-            // ── Partial success ──────────────────────────────────────
-            html += '<div class="success-icon success-icon--warning">' +
-                '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="48" height="48">' +
-                '<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"></path>' +
-                '</svg></div>';
-            html += '<h1 class="success-title">Order Partially Processed</h1>';
-
-            if (orderToken) {
-                html += '<p class="success-order-id">Order ID: <strong>' + escHtml(orderToken) + '</strong></p>';
+        (function () {
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+    
+            // Clear cart on success page load
+            Cart.clear();
+    
+            // ── Read URL params (replaces PHP $_GET) ──────────────────────
+            var params          = new URLSearchParams(window.location.search);
+            var isPartial       = params.get('status') === 'partial';
+            var successfulCount = parseInt(params.get('successful')) || 0;
+            var failedCount     = parseInt(params.get('failed')) || 0;
+            var orderToken      = params.get('orderToken') || '';
+            var successfulSubs  = [];
+            var failedSubs      = [];
+    
+            try { successfulSubs = JSON.parse(decodeURIComponent(params.get('successful_subs') || '[]')); } catch(e) {}
+            try { failedSubs     = JSON.parse(decodeURIComponent(params.get('failed_subs') || '[]'));     } catch(e) {}
+    
+            // ── Strip query params from the URL bar ─────────────────────
+            if (window.location.search) {
+                window.history.replaceState(null, '', window.location.pathname);
             }
-
-            if (successfulCount > 0) {
-                html += '<div class="success-status-block success-status-block--ok">' +
-                    '<h3>Successfully Activated (' + successfulCount + ' items)</h3>';
-                successfulSubs.forEach(function (sub) {
-                    html += '<p><strong>' + escHtml(sub.product_type || '') + '</strong> — $' +
-                        escHtml(String(sub.plan_amount || '')) + '/month ' +
-                        '<span class="status-badge status-badge--active">Active</span></p>';
-                });
-                html += '</div>';
+    
+            // ── Build page HTML ───────────────────────────────────────────
+            var page = document.getElementById('success-page');
+            var html = '';
+    
+            if (isPartial) {
+                // ── Partial success ──────────────────────────────────────
+                html += '<div class="success-icon success-icon--warning">' +
+                    '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="48" height="48">' +
+                    '<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"></path>' +
+                    '</svg></div>';
+                html += '<h1 class="success-title">Order Partially Processed</h1>';
+    
+                if (orderToken) {
+                    html += '<p class="success-order-id">Order ID: <strong>' + escHtml(orderToken) + '</strong></p>';
+                }
+    
+                if (successfulCount > 0) {
+                    html += '<div class="success-status-block success-status-block--ok">' +
+                        '<h3>Successfully Activated (' + successfulCount + ' items)</h3>';
+                    successfulSubs.forEach(function (sub) {
+                        html += '<p><strong>' + escHtml(sub.product_type || '') + '</strong> — $' +
+                            escHtml(String(sub.plan_amount || '')) + '/month ' +
+                            '<span class="status-badge status-badge--active">Active</span></p>';
+                    });
+                    html += '</div>';
+                }
+    
+                if (failedCount > 0) {
+                    html += '<div class="success-status-block success-status-block--pending">' +
+                        '<h3>Pending Support Review (' + failedCount + ' items)</h3>';
+                    failedSubs.forEach(function (sub) {
+                        html += '<p><strong>' + escHtml(sub.product || '') + '</strong> — $' +
+                            escHtml(String(sub.plan || '')) + '/month ' +
+                            '<span class="status-badge status-badge--pending">Pending</span></p>';
+                    });
+                    html += '</div>';
+                }
+    
+                html += '<div class="success-next-steps"><h3>What happens next?</h3><ul>' +
+                    '<li>Our support team will contact you within 24 hours</li>' +
+                    '<li>We\'ll complete the setup for any pending items</li>' +
+                    '<li>You\'ll receive tracking information for your devices</li>' +
+                    '</ul></div>';
+    
+            } else {
+                // ── Full success ─────────────────────────────────────────
+                html += '<div class="success-icon">' +
+                    '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="48" height="48">' +
+                    '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>' +
+                    '</svg></div>';
+                html += '<h1 class="success-title">Order Confirmed!</h1>';
+    
+                if (orderToken) {
+                    html += '<p class="success-order-id">Order ID: <strong>' + escHtml(orderToken) + '</strong></p>';
+                }
+    
+                html += '<p class="success-message">Payment successful! You will receive a confirmation email with your order details and tracking information shortly.</p>';
             }
-
-            if (failedCount > 0) {
-                html += '<div class="success-status-block success-status-block--pending">' +
-                    '<h3>Pending Support Review (' + failedCount + ' items)</h3>';
-                failedSubs.forEach(function (sub) {
-                    html += '<p><strong>' + escHtml(sub.product || '') + '</strong> — $' +
-                        escHtml(String(sub.plan || '')) + '/month ' +
-                        '<span class="status-badge status-badge--pending">Pending</span></p>';
-                });
-                html += '</div>';
+    
+            // ── Common footer ─────────────────────────────────────────────
+            html += '<div class="success-contact">' +
+                '<p>Questions? Contact us at <a href="mailto:support.gps@family1st.io">support.gps@family1st.io</a>' +
+                ' or call <a href="tel:18554627819">1-855-462-7819</a></p></div>';
+    
+            html += '<div class="success-apps"><p><strong>Download the Family1st App:</strong></p>' +
+                '<div class="success-apps__links">' +
+                '<a href="https://apps.apple.com/app/id1434847390" target="_blank" rel="noopener noreferrer" class="btn btn--primary">iOS App</a>' +
+                '<a href="https://play.google.com/store/apps/details?id=com.family1stGPS" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Android App</a>' +
+                '</div></div>';
+    
+            html += '<a href="index.html" class="btn btn--primary btn--large success-continue">Continue Shopping</a>';
+    
+            page.innerHTML = html;
+    
+            // ── XSS helper ────────────────────────────────────────────────
+            function escHtml(str) {
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;');
             }
-
-            html += '<div class="success-next-steps"><h3>What happens next?</h3><ul>' +
-                '<li>Our support team will contact you within 24 hours</li>' +
-                '<li>We\'ll complete the setup for any pending items</li>' +
-                '<li>You\'ll receive tracking information for your devices</li>' +
-                '</ul></div>';
-
-        } else {
-            // ── Full success ─────────────────────────────────────────
-            html += '<div class="success-icon">' +
-                '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="48" height="48">' +
-                '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>' +
-                '</svg></div>';
-            html += '<h1 class="success-title">Order Confirmed!</h1>';
-
-            if (orderToken) {
-                html += '<p class="success-order-id">Order ID: <strong>' + escHtml(orderToken) + '</strong></p>';
-            }
-
-            html += '<p class="success-message">Payment successful! You will receive a confirmation email with your order details and tracking information shortly.</p>';
-        }
-
-        // ── Common footer ─────────────────────────────────────────────
-        html += '<div class="success-contact">' +
-            '<p>Questions? Contact us at <a href="mailto:support.gps@family1st.io">support.gps@family1st.io</a>' +
-            ' or call <a href="tel:18554627819">1-855-462-7819</a></p></div>';
-
-        html += '<div class="success-apps"><p><strong>Download the Family1st App:</strong></p>' +
-            '<div class="success-apps__links">' +
-            '<a href="https://apps.apple.com/app/id1434847390" target="_blank" rel="noopener noreferrer" class="btn btn--primary">iOS App</a>' +
-            '<a href="https://play.google.com/store/apps/details?id=com.family1stGPS" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Android App</a>' +
-            '</div></div>';
-
-        html += '<a href="index.html" class="btn btn--primary btn--large success-continue">Continue Shopping</a>';
-
-        page.innerHTML = html;
-
-        // ── XSS helper ────────────────────────────────────────────────
-        function escHtml(str) {
-            return String(str)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;');
-        }
-
-        // ── Mobile menu ───────────────────────────────────────────────
-        var menuBtn = document.getElementById('menu-toggle');
-        var menu    = document.getElementById('mobile-menu');
-        if (menuBtn && menu) menuBtn.addEventListener('click', function () { menu.classList.toggle('menu-open'); });
-    })();
+    
+            // ── Mobile menu ───────────────────────────────────────────────
+            var menuBtn = document.getElementById('menu-toggle');
+            var menu    = document.getElementById('mobile-menu');
+            if (menuBtn && menu) menuBtn.addEventListener('click', function () { menu.classList.toggle('menu-open'); });
+        })();
     </script>
 </body>
 </html>
