@@ -10,20 +10,26 @@
     <meta name="keywords"
         content="GPS tracker,vehicle tracker,family GPS,real-time tracking,teen driver tracker,senior tracker,fleet tracking">
     <link rel="icon" href="/favicon.ico" sizes="256x256" type="image/x-icon">
+    <link rel="icon" href="https://family1st.io/wp-content/uploads/2018/01/logo-ff1st-100x100.png" sizes="32x32" />
     <link rel="stylesheet" href="style.css">
-    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
-    <style>
-        /* Align product-actions on the same line across all cards */
-        .product-card { display: flex; flex-direction: column; }
-        .product-card .body { display: flex; flex-direction: column; flex: 1; }
-        .product-actions { margin-top: auto; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script type="text/javascript">
+        window._mfq = window._mfq || [];
+        (function() {
+            var mf = document.createElement("script");
+            mf.type = "text/javascript"; mf.defer = true;
+            mf.src = "//cdn.mouseflow.com/projects/f13510f8-cf73-4dca-afce-7fab7cdf95a9.js";
+            document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+    </script>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="/" class="logo">
+            <a href="/family1st-io-v2/" class="logo">
                 <div class="logo-icon">
                     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -36,12 +42,13 @@
                 <span class="logo-text">Family<span>1st</span></span>
             </a>
             <nav class="nav-links">
-                <a href="/">Home</a>
+                <a href="/family1st-io-v2/">Home</a>
                 <a href="../products">Products</a>
-                <a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a>
-                <a href="https://family1st.io/blogs/">Blog</a>
-                <a href="https://family1st.io/faq/">FAQ</a>
-                <a class="btn btn-primary" href="#" rel="noopener noreferrer">Shop Now</a>
+                <a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a>
+                <a href="https://family1st.io/blog">Blog</a>
+                <a href="https://family1st.io/faq">FAQ</a>
+                <a class="btn btn-primary" href="https://go.family1st.io" target="_blank" rel="noopener noreferrer">Shop
+                    Now</a>
             </nav>
             <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Toggle menu">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -51,207 +58,378 @@
         </div>
         <div id="mobile-menu" class="mobile-menu">
             <div class="mobile-menu-inner">
-                <a href="/">Home</a>
+                <a href="/family1st-io-v2/">Home</a>
                 <a href="../products">Products</a>
-                <a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a>
-                <a href="https://family1st.io/blogs/">Blog</a>
-                <a href="https://family1st.io/faq/">FAQ</a>
-                <a class="btn btn-primary" href="#" rel="noopener noreferrer">Shop Now</a>
+                <a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a>
+                <a href="https://family1st.io/blog">Blog</a>
+                <a href="https://family1st.io/faq">FAQ</a>
+                <a class="btn btn-primary" href="https://go.family1st.io" target="_blank" rel="noopener noreferrer">Shop
+                    Now</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="section section--white" id="products">
+        <!-- Hero -->
+        <section class="products-hero">
+            <div class="products-hero-glow"></div>
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Our GPS Trackers</h2>
-                    <p class="section-desc">Find the perfect tracker for your needs. All devices come with a 30-day
-                        money-back guarantee.</p>
+                <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+                    <a href="/family1st-io-v2/">Home</a>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span>Products</span>
+                </nav>
+                <h1 class="products-hero-title reveal reveal-delay-1">Our GPS Trackers</h1>
+                <p class="products-hero-desc reveal reveal-delay-2">Find the perfect tracker for your needs. All devices
+                    come with a
+                    <strong>30-day money-back guarantee</strong> and the lowest subscription in the US.
+                </p>
+                <div class="products-hero-stats reveal reveal-delay-3">
+                    <div class="stat-pill">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>30-Day Guarantee</span>
+                    </div>
+                    <div class="stat-pill">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                        <span>From $21.95/mo</span>
+                    </div>
+                    <div class="stat-pill">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span>Real-Time Tracking</span>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="section" id="products">
+            <div class="container">
                 <div class="products-grid">
-                    <div class="product-card">
-                        <a href="../products/monthly-subscription">
+                    <!-- Covert GPS Tracker -->
+                    <div class="product-card reveal">
+                        <a href="../products/monthly-subscription" class="img-link">
                             <div class="img-wrap">
-                                <img src="https://go.family1st.io/cdn/shop/files/ff-page-image3f_ea93f47e-6fc6-4e9a-84d7-ae55c0e9b8aa.webp?v=1741202837&width=1440"
-                                    alt="Covert GPS Tracker" width="400" height="400" loading="lazy">
-                                <!-- <span class="product-badge">Best Seller</span> -->
+                                <img src="../img/free-device.jpg"
+                                    alt="get a free gps device (worth $89.95) + premium features low monthly subscription $20.95"
+                                    width="400" height="400" loading="lazy">
                             </div>
                         </a>
                         <div class="body">
-                            <h3><a href="../products/monthly-subscription">Get a FREE GPS Device (worth $89.95) + Premium Features</a></h3>
-                            <p class="line-clamp-2">With Family1st GPS Trackers, keeping an eye on your loved ones, vehicles, and valuable assets has never....</p>
-                            <div class="price">$20.95 <!--<span class="price-note">+ from $20.95/mo</span>--></div>
-                            <ul>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Real-time GPS tracking</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Geofence alerts</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> 30-day battery life</li>
+                            <div class="product-meta">
+                                <span class="product-tag">Vehicles</span>
+                            </div>
+                            <h3><a href="../products/monthly-subscription">Get a FREE GPS Device (worth $89.95) +
+                                    Premium Features Low Monthly Subscription $20.95</a></h3>
+                            <p class="product-desc">With Family1st GPS Trackers, keeping an eye on your loved ones,
+                                vehicles, and valuable assets has never....</p>
+                            <div class="price-row">
+                                <span class="price">$20.95</span>
+                                <!-- <span class="price-note">+ from $21.95/mo</span> -->
+                            </div>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Real-time GPS tracking
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Geofence alerts
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    30-day battery life
+                                </li>
                             </ul>
                             <div class="product-actions">
-                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer" href="../products/monthly-subscription">Details</a>
-                                <!-- <a class="btn btn-primary" href="https://go.family1st.io/products/portable-gps-tracker"
-                                    target="_blank" rel="noopener noreferrer">Shop Now</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <a href="../products/portable-gps-tracker">
-                            <div class="img-wrap">
-                                <img src="https://go.family1st.io/cdn/shop/files/image_1.png?v=1764222541"
-                                    alt="Portable GPS Tracker" width="400" height="400" loading="lazy">
-                            </div>
-                        </a>
-                        <div class="body">
-                            <h3><a href="../products/portable-gps-tracker">Portable GPS Tracker</a></h3>
-                            <p class="line-clamp-2">Versatile GPS tracker for on-the-go tracking. Compact design works
-                                for vehicles, assets, and....</p>
-                            <div class="price">$29.95 <!--<span class="price-note">+ from $21.95/mo</span>--></div>
-                            <ul>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Real-time GPS tracking</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Geofence alerts and low battery alerts</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Ultra-compact: 3.0" x 1.6" x 0.7" — smaller than a credit card</li>
-                            </ul>
-                            <div class="product-actions">
-                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer" href="../products/portable-gps-tracker">Details</a>
-                                <!-- <a class="btn btn-primary" href="https://go.family1st.io/products/portable-gps-tracker"
-                                    target="_blank" rel="noopener noreferrer">Shop Now</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <a href="../products/plug-in-obd-tracker">
-                            <div class="img-wrap">
-                                <img src="https://go.family1st.io/cdn/shop/files/ProductImage_596x_crop_center_a32a6195-e75b-4ef3-9efe-0b8ca96fc82a.webp?v=1740512507"
-                                    alt="Plug-in OBD Tracker" width="400" height="400" loading="lazy">
-                                <!-- <span class="product-badge">No Charging</span> -->
-                            </div>
-                        </a>
-                        <div class="body">
-                            <h3><a href="../products/plug-in-obd-tracker">Plug-in OBD Tracker</a></h3>
-                            <p class="line-clamp-2">Simply plug into your vehicle's OBD-II port. No charging needed —
-                                powered by your vehicle. Ideal.....</p>
-                            <div class="price">$55.99 <!--<span class="price-note">+ from $21.95/mo</span>--></div>
-                            <ul>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Plug the device into the OBD port</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> No charging required</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Vehicle diagnostics</li>
-                            </ul>
-                            <div class="product-actions">
-                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer" href="../products/plug-in-obd-tracker">Details</a>
-                                <!-- <a class="btn btn-primary" href="https://go.family1st.io/products/family1st-plug-in-gps-tracker"
-                                    target="_blank" rel="noopener noreferrer">Shop Now</a> -->
+                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer"
+                                    href="../products/monthly-subscription">Details</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="product-card">
-                        <a href="../products/senior-gps-tracker">
+                    <!-- Portable GPS Tracker -->
+                    <div class="product-card reveal reveal-delay-1">
+                        <a href="../products/portable-gps-tracker" class="img-link">
                             <div class="img-wrap">
-                                <img src="https://go.family1st.io/cdn/shop/files/Senior2_1220x_crop_center_706b2235-9506-4ed9-822d-16d82412b852.webp?v=1740489306"
-                                    alt="Senior GPS Tracker" width="400" height="400" loading="lazy">
-                                <!-- <span class="product-badge">No Charging</span> -->
+                                <img src="../img/portable-device.jpg" alt="Portable GPS Tracker" width="400"
+                                    height="400" loading="lazy">
                             </div>
                         </a>
                         <div class="body">
+                            <div class="product-meta">
+                                <span class="product-tag">Personal</span>
+                            </div>
+                            <h3><a href="../products/portable-gps-tracker">Portable GPS Tracker</a></h3>
+                            <p class="product-desc">Versatile GPS tracker for on-the-go tracking. Compact design works
+                                for vehicles, assets, and more.</p>
+                            <div class="price-row">
+                                <span class="price">$29.95</span>
+                                <!-- <span class="price-note">+ from $21.95/mo</span> -->
+                            </div>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Real-time GPS tracking
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Geofence alerts and low battery alerts
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Ultra-compact: 3.0" x 1.6" x 0.7" — smaller than a credit card
+                                </li>
+                            </ul>
+                            <div class="product-actions">
+                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer"
+                                    href="../products/portable-gps-tracker">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plug-in OBD Tracker -->
+                    <div class="product-card reveal reveal-delay-2">
+                        <a href="../products/plug-in-obd-tracker" class="img-link">
+                            <div class="img-wrap">
+                                <img src="../img/obd.webp" alt="Plug-in OBD Tracker" width="400" height="400"
+                                    loading="lazy">
+                                <span class="product-badge badge-feature">No Charging</span>
+                            </div>
+                        </a>
+                        <div class="body">
+                            <div class="product-meta">
+                                <span class="product-tag">Teen Drivers</span>
+                            </div>
+                            <h3><a href="../products/plug-in-obd-tracker">Plug-in OBD Tracker</a></h3>
+                            <p class="product-desc">Simply plug into your vehicle's OBD-II port. No charging needed —
+                                powered by your vehicle.</p>
+                            <div class="price-row">
+                                <span class="price">$55.99</span>
+                                <!-- <span class="price-note">+ from $21.95/mo</span> -->
+                            </div>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Plug the device into the OBD port
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    No charging required
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Vehicle diagnostics
+                                </li>
+                            </ul>
+                            <div class="product-actions">
+                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer"
+                                    href="../products/plug-in-obd-tracker">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Senior GPS Tracker -->
+                    <div class="product-card reveal reveal-delay-3">
+                        <a href="../products/senior-gps-tracker" class="img-link">
+                            <div class="img-wrap">
+                                <img src="../img/senior.webp" alt="Senior GPS Tracker" width="400" height="400"
+                                    loading="lazy">
+                            </div>
+                        </a>
+                        <div class="body">
+                            <div class="product-meta">
+                                <span class="product-tag">Seniors</span>
+                            </div>
                             <h3><a href="../products/senior-gps-tracker">Senior GPS Tracker</a></h3>
-                            <p class="line-clamp-2">Designed for elderly loved ones. Features SOS button, fall detection
-                                alerts, and simple operation.....</p>
-                            <div class="price">$29.95 <!--<span class="price-note">+ from $21.95/mo</span>--></div>
-                            <ul>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Geofence alert</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Low battery alert</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Real-time location</li>
+                            <p class="product-desc">Designed for elderly loved ones. Features SOS button, fall detection
+                                alerts, and simple operation.</p>
+                            <div class="price-row">
+                                <span class="price">$29.95</span>
+                                <!-- <span class="price-note">+ from $21.95/mo</span> -->
+                            </div>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Geofence alert
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Low battery alert
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Real-time location
+                                </li>
                             </ul>
                             <div class="product-actions">
-                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer" href="../products/senior-gps-tracker">Details</a>
-                                <!-- <a class="btn btn-primary" href="https://go.family1st.io/products/family1st-senior-gps-tracker"
-                                    target="_blank" rel="noopener noreferrer">Shop Now</a> -->
+                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer"
+                                    href="../products/senior-gps-tracker">Details</a>
                             </div>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <a href="../products/teen-gps-tracker">
+
+                    <!-- Teen GPS Tracker -->
+                    <div class="product-card reveal reveal-delay-4">
+                        <a href="../products/teen-gps-tracker" class="img-link">
                             <div class="img-wrap">
-                                <img src="https://go.family1st.io/cdn/shop/files/Teen2_1220x_crop_center_86d7c855-4138-4daa-b4a1-38344016ee9b.webp?v=1739907616"
-                                    alt="Teen GPS Tracker" width="400" height="400" loading="lazy">
-                                <!-- <span class="product-badge">No Charging</span> -->
+                                <img src="../img/teens.webp" alt="Teen GPS Tracker" width="400" height="400"
+                                    loading="lazy">
                             </div>
                         </a>
                         <div class="body">
+                            <div class="product-meta">
+                                <span class="product-tag">Teens</span>
+                            </div>
                             <h3><a href="../products/teen-gps-tracker">Teen GPS Tracker</a></h3>
-                            <p class="line-clamp-2">Monitor your teen's driving habits. Get real-time location, speed
+                            <p class="product-desc">Monitor your teen's driving habits. Get real-time location, speed
                                 alerts, and driving behavior reports.</p>
-                            <div class="price">$29.95 <!--<span class="price-note">+ from $21.95/mo</span>--></div>
-                            <ul>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Real-time location tracking</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg>  Geofence alert</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Driving behavior scoring</li>
+                            <div class="price-row">
+                                <span class="price">$29.95</span>
+                                <!-- <span class="price-note">+ from $21.95/mo</span> -->
+                            </div>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Real-time location tracking
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Geofence alert
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Driving behavior scoring
+                                </li>
                             </ul>
                             <div class="product-actions">
-                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer" href="../products/teen-gps-tracker">Details</a>
-                                <!-- <a class="btn btn-primary" href="https://go.family1st.io/products/family1st-teen-gps-tracker"
-                                    target="_blank" rel="noopener noreferrer">Shop Now</a> -->
+                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer"
+                                    href="../products/teen-gps-tracker">Details</a>
                             </div>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <a href="../products/magnetic-gps-tracker">
+
+                    <!-- GPS Tracker with Built-in Magnets -->
+                    <div class="product-card reveal reveal-delay-5">
+                        <a href="../products/magnetic-gps-tracker" class="img-link">
                             <div class="img-wrap">
-                                <img src="https://family1st.io/asset-tracker/images/assettracker-img1.jpg"
-                                    alt="GPS Tracker with Built-in Magnets" width="400" height="400" loading="lazy">
-                                <!-- <span class="product-badge">No Charging</span> -->
+                                <img src="../img/asset.webp" alt="GPS Tracker with Built-in Magnets" width="400"
+                                    height="400" loading="lazy">
                             </div>
                         </a>
                         <div class="body">
+                            <div class="product-meta">
+                                <span class="product-tag">Assets / Fleet</span>
+                            </div>
                             <h3><a href="../products/magnetic-gps-tracker">GPS Tracker with Built-in Magnets</a></h3>
-                            <p class="line-clamp-2">Built-in powerful magnets for easy attachment to any metal surface.
-                                Perfect for fleet and asset.....</p>
-                            <div class="price">$45.00 <!--<span class="price-note">+ from $9/mo</span>--></div>
-                            <ul>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Built-in magnets</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Weatherproof IP67</li>
-                                <li><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                    </svg> Real-time tracking</li>
+                            <p class="product-desc">Built-in powerful magnets for easy attachment to any metal surface.
+                                Perfect for fleet and asset tracking.</p>
+                            <div class="price-row">
+                                <span class="price">$45.00</span>
+                                <!-- <span class="price-note">+ from $9/mo</span> -->
+                            </div>
+                            <ul class="feature-list">
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Built-in magnets
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Weatherproof IP67
+                                </li>
+                                <li>
+                                    <span class="check-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                            stroke-width="2.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7">
+                                            </path>
+                                        </svg></span>
+                                    Real-time tracking
+                                </li>
                             </ul>
                             <div class="product-actions">
-                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer" href="../products/magnetic-gps-tracker">Details</a>
-                                <!-- <a class="btn btn-primary" href="https://family1st.io/asset-tracker/"
-                                    target="_blank" rel="noopener noreferrer">Shop Now</a> -->
+                                <a class="btn btn-outline-blue" target="_blank" rel="noopener noreferrer"
+                                    href="../products/magnetic-gps-tracker">Details</a>
                             </div>
                         </div>
                     </div>
@@ -259,18 +437,20 @@
             </div>
         </section>
 
-        <section class="section section--gray comparison-section" id="comparison">
+        <!-- Comparison Table -->
+        <section class="section comparison-section" id="comparison">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
+                    <!-- <span class="section-eyebrow">Side-by-Side</span> -->
                     <h2 class="section-title">Compare Our Trackers</h2>
                     <p class="section-desc">Find the right GPS tracker by comparing features side-by-side.</p>
                 </div>
-                <div class="comparison-table-wrap">
+                <div class="comparison-table-wrap reveal reveal-delay-1">
                     <table class="comparison-table">
                         <thead>
                             <tr>
                                 <th class="comparison-feature-col">Feature</th>
-                                <th>Free GPS Device (worth $89.95) +<br>Premium Features</th>
+                                <th>Free GPS Device (worth $89.95) +<br> Premium Features</th>
                                 <th>Portable</th>
                                 <th>OBD Tracker</th>
                                 <th>Senior</th>
@@ -278,7 +458,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="comparison-row-alt">
+                            <tr>
                                 <td class="comparison-feature-col">Device Price</td>
                                 <td>$20.95</td>
                                 <td>$29.95</td>
@@ -286,7 +466,7 @@
                                 <td>$29.95</td>
                                 <td>$45.00</td>
                             </tr>
-                            <tr>
+                            <tr class="comparison-row-alt">
                                 <td class="comparison-feature-col">Monthly Subscription</td>
                                 <td>From $20.95/mo</td>
                                 <td>From $21.95/mo</td>
@@ -294,7 +474,7 @@
                                 <td>From $21.95/mo</td>
                                 <td>From $9/mo</td>
                             </tr>
-                            <tr class="comparison-row-alt">
+                            <tr>
                                 <td class="comparison-feature-col">Real-Time Tracking</td>
                                 <td><span class="icon-check" aria-hidden="true"></span></td>
                                 <td><span class="icon-check" aria-hidden="true"></span></td>
@@ -302,7 +482,7 @@
                                 <td><span class="icon-check" aria-hidden="true"></span></td>
                                 <td><span class="icon-check" aria-hidden="true"></span></td>
                             </tr>
-                            <tr>
+                            <tr class="comparison-row-alt">
                                 <td class="comparison-feature-col">Geofence Alerts</td>
                                 <td><span class="icon-check" aria-hidden="true"></span></td>
                                 <td><span class="icon-check" aria-hidden="true"></span></td>
@@ -310,14 +490,6 @@
                                 <td><span class="icon-check" aria-hidden="true"></span></td>
                                 <td><span class="icon-x" aria-hidden="true"></span></td>
                             </tr>
-                            <!-- <tr class="comparison-row-alt">
-                                <td class="comparison-feature-col">Speed Alerts</td>
-                                <td><span class="icon-check" aria-hidden="true"></span></td>
-                                <td><span class="icon-check" aria-hidden="true"></span></td>
-                                <td><span class="icon-check" aria-hidden="true"></span></td>
-                                <td><span class="icon-x" aria-hidden="true"></span></td>
-                                <td><span class="icon-check" aria-hidden="true"></span></td>
-                            </tr> -->
                             <tr>
                                 <td class="comparison-feature-col">Battery Life</td>
                                 <td>30 days</td>
@@ -334,15 +506,7 @@
                                 <td><span class="icon-x" aria-hidden="true"></span></td>
                                 <td>Yes (IP67)</td>
                             </tr>
-                            <!-- <tr>
-                                <td class="comparison-feature-col">SOS Button</td>
-                                <td><span class="icon-x" aria-hidden="true"></span></td>
-                                <td><span class="icon-check" aria-hidden="true"></span></td>
-                                <td><span class="icon-x" aria-hidden="true"></span></td>
-                                <td><span class="icon-check" aria-hidden="true"></span></td>
-                                <td><span class="icon-x" aria-hidden="true"></span></td>
-                            </tr> -->
-                            <tr class="comparison-row-alt">
+                            <tr>
                                 <td class="comparison-feature-col">Vehicle Diagnostics</td>
                                 <td><span class="icon-x" aria-hidden="true"></span></td>
                                 <td><span class="icon-x" aria-hidden="true"></span></td>
@@ -350,31 +514,26 @@
                                 <td><span class="icon-x" aria-hidden="true"></span></td>
                                 <td><span class="icon-x" aria-hidden="true"></span></td>
                             </tr>
-                            <tr>
+                            <tr class="comparison-row-alt">
                                 <td class="comparison-feature-col">Best For</td>
-                                <td>Vehicles</td>
-                                <td>Personal</td>
-                                <td>Teen Drivers</td>
-                                <td>Seniors</td>
-                                <td>Assets/Fleet</td>
+                                <td><strong>Vehicles</strong></td>
+                                <td><strong>Personal</strong></td>
+                                <td><strong>Teen Drivers</strong></td>
+                                <td><strong>Seniors</strong></td>
+                                <td><strong>Assets/Fleet</strong></td>
                             </tr>
                             <tr class="comparison-cta-row">
                                 <td class="comparison-feature-col comparison-cta-cell"></td>
-                                <td><a class="btn btn-primary btn-shop"
-                                        href="../products/monthly-subscription/" target="_blank"
-                                        rel="noopener noreferrer">Shop Now</a></td>
-                                <td><a class="btn btn-primary btn-shop"
-                                        href="../products/portable-gps-tracker/" target="_blank"
-                                        rel="noopener noreferrer">Shop Now</a></td>
-                                <td><a class="btn btn-primary btn-shop"
-                                        href="../products/plug-in-obd-tracker/" target="_blank"
-                                        rel="noopener noreferrer">Shop Now</a></td>
-                                <td><a class="btn btn-primary btn-shop"
-                                        href="../products/senior-gps-tracker/" target="_blank"
-                                        rel="noopener noreferrer">Shop Now</a></td>
-                                <td><a class="btn btn-primary btn-shop"
-                                        href="../products/magnetic-gps-tracker/" target="_blank"
-                                        rel="noopener noreferrer">Shop Now</a></td>
+                                <td><a class="btn btn-primary btn-shop" href="../products/monthly-subscription"
+                                        target="_blank" rel="noopener noreferrer">Shop Now</a></td>
+                                <td><a class="btn btn-primary btn-shop" href="../products/portable-gps-tracker"
+                                        target="_blank" rel="noopener noreferrer">Shop Now</a></td>
+                                <td><a class="btn btn-primary btn-shop" href="../products/plug-in-obd-tracker/"
+                                        target="_blank" rel="noopener noreferrer">Shop Now</a></td>
+                                <td><a class="btn btn-primary btn-shop" href="../products/senior-gps-tracker"
+                                        target="_blank" rel="noopener noreferrer">Shop Now</a></td>
+                                <td><a class="btn btn-primary btn-shop" href="../products/magnetic-gps-tracker"
+                                        target="_blank" rel="noopener noreferrer">Shop Now</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -382,10 +541,12 @@
             </div>
         </section>
 
-        <section class="section section--gray app-section" id="app">
+        <!-- Track From Anywhere (App) -->
+        <section class="section app-section" id="app">
             <div class="container">
                 <div class="app-grid">
-                    <div class="app-content">
+                    <div class="app-content reveal">
+                        <span class="section-eyebrow">Mobile App</span>
                         <h2 class="section-title app-title">Track From Anywhere</h2>
                         <p class="app-desc">Our free mobile app puts real-time tracking in your pocket. Available for
                             both iOS and Android — manage all your devices from one dashboard.</p>
@@ -449,7 +610,7 @@
                             <span class="app-rating-text">4.7 rating on App Store &amp; Google Play</span>
                         </div>
                     </div>
-                    <div class="app-phone-wrap">
+                    <div class="app-phone-wrap reveal reveal-delay-2">
                         <div class="phone-mockup">
                             <div class="phone-screen">
                                 <svg class="phone-screen-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -483,25 +644,27 @@
             </div>
         </section>
 
+        <!-- CTA -->
         <section class="cta-section">
-            <div class="cta-inner container">
+            <div class="cta-glow"></div>
+            <div class="cta-inner container reveal">
                 <h2>Ready to Get Started?</h2>
                 <p>Join over 1 million families who trust Family1st for GPS tracking. Devices start at $29.95 with the
                     lowest subscription in the US.</p>
                 <div class="cta-buttons">
-                    <a class="btn btn-white" href="../products" target="_blank" rel="noopener noreferrer">Shop GPS Trackers</a>
+                    <a class="btn btn-white" href="../products" target="_blank" rel="noopener noreferrer">Shop GPS
+                        Trackers</a>
                     <!-- <a class="btn btn-outline-white" href="../products">Compare Models</a> -->
                 </div>
             </div>
         </section>
     </main>
 
-
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <a href="/" class="logo">
+                    <a href="/family1st-io-v2/" class="logo">
                         <div class="logo-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                 stroke-width="2" style="width:1.25rem;height:1.25rem;color:white">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -509,20 +672,19 @@
                                 </path>
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg></div>
-                        <span class="logo-text">Family<span>1st</span></span>
+                            </svg></div><span class="logo-text">Family<span>1st</span></span>
                     </a>
-                    <p>GPS tracking for peace of mind. Protect your family, vehicles, and assets with the lowest
-                        subscription in the US.</p>
+                    <p class="footer-brand-desc">GPS tracking for peace of mind. Protect your family, vehicles, and
+                        assets with the lowest subscription in the US.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="../products">Products</a></li>
-                        <li><a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a></li>
+                        <li><a href="/family1st-io-v2/">Home</a></li>
+                        <li><a href="products">Products</a></li>
+                        <li><a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a></li>
                         <li><a href="https://family1st.io/blogs/">Blog</a></li>
-                        <li><a href="https://family1st.io/faq/">FAQ</a></li>
+                        <li><a href="https://family1st.io/faq">FAQ</a></li>
                         <li><a href="#" rel="noopener noreferrer">Shop</a></li>
                     </ul>
                 </div>
@@ -533,12 +695,10 @@
                         <li><a href="tel:18554627819">1-855-462-7819</a></li>
                         <li>M-F 9AM-5PM PT</li>
                         <li>
-                            <div class="flex gap-3">
-                                <a href="https://apps.apple.com/app/id1434847390" target="_blank"
-                                    rel="noopener noreferrer">iOS App</a>
-                                <a href="https://play.google.com/store/apps/details?id=com.family1stGPS" target="_blank"
-                                    rel="noopener noreferrer">Android App</a>
-                            </div>
+                            <div class="app-links"><a href="https://apps.apple.com/app/id1434847390" target="_blank"
+                                    rel="noopener noreferrer">iOS App</a><a
+                                    href="https://play.google.com/store/apps/details?id=com.family1stGPS"
+                                    target="_blank" rel="noopener noreferrer">Android App</a></div>
                         </li>
                     </ul>
                 </div>
@@ -549,14 +709,14 @@
                                 rel="noopener noreferrer">Privacy Policy</a></li>
                         <li><a href="https://family1st.io/terms-and-conditions" target="_blank"
                                 rel="noopener noreferrer">Terms of Service</a></li>
-                        <li><a href="https://family1st.io/refundpolicy" target="_blank"
-                                rel="noopener noreferrer">Refund Policy</a></li>
+                        <li><a href="https://family1st.io/refundpolicy" target="_blank" rel="noopener noreferrer">Refund
+                                Policy</a></li>
                         <li><a href="#" rel="noopener noreferrer">Shipping Policy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Family1st. All rights reserved.</p>
+                <p>&copy; 2026 Family1st. All rights reserved.</p>
                 <p>6701 Koll Center Pkwy Suite 250, Pleasanton, CA 94566</p>
             </div>
         </div>
@@ -565,19 +725,48 @@
     <script>
         (function () {
             function init() {
-            var btn = document.getElementById('menu-toggle');
-            var menu = document.getElementById('mobile-menu');
-            if (btn && menu) {
-                btn.addEventListener('click', function () {
-                menu.classList.toggle('menu-open');
-                });
+                /* Mobile menu toggle */
+                var btn = document.getElementById('menu-toggle');
+                var menu = document.getElementById('mobile-menu');
+                if (btn && menu) {
+                    btn.addEventListener('click', function () {
+                        menu.classList.toggle('menu-open');
+                    });
+                }
+
+                /* Scroll-triggered reveal animations */
+                var els = document.querySelectorAll('.reveal');
+                if ('IntersectionObserver' in window && els.length) {
+                    var observer = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('active');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+                    els.forEach(function (el) { observer.observe(el); });
+                } else {
+                    els.forEach(function (el) { el.classList.add('active'); });
+                }
+
+                /* Header scroll effect */
+                var header = document.querySelector('.site-header');
+                if (header) {
+                    window.addEventListener('scroll', function () {
+                        if (window.scrollY > 50) {
+                            header.style.background = 'rgba(0,0,0,.85)';
+                        } else {
+                            header.style.background = 'rgba(0,0,0,.6)';
+                        }
+                    }, { passive: true });
+                }
             }
-            }
-        
+
             if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
+                document.addEventListener('DOMContentLoaded', init);
             } else {
-            init();
+                init();
             }
         })();
     </script>
