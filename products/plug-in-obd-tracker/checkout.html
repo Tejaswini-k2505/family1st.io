@@ -7,10 +7,21 @@
     <meta name="description" content="Complete your purchase of Family1st GPS Trackers.">
     <meta name="robots" content="noindex,nofollow">
     <link rel="icon" href="/favicon.ico" sizes="256x256" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="icon" href="https://family1st.io/wp-content/uploads/2018/01/logo-ff1st-100x100.png" sizes="32x32" />
+    <link rel="stylesheet" href="css/style_html.css">
+    <link rel="stylesheet" href="css/checkout_new.css">
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <script type="text/javascript">
+        window._mfq = window._mfq || [];
+        (function() {
+          var mf = document.createElement("script");
+          mf.type = "text/javascript"; mf.defer = true;
+          mf.src = "//cdn.mouseflow.com/projects/f13510f8-cf73-4dca-afce-7fab7cdf95a9.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+    </script>
 </head>
 <body>
 
@@ -27,8 +38,8 @@
             </a>
             <nav class="nav-links">
                 <a href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a>
+                <a href="../../products">Products</a>
+                <a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a>
                 <a href="https://family1st.io/blogs/">Blog</a>
                 <a href="https://family1st.io/faq">FAQ</a>
                 <a class="btn btn-primary cart-icon-link" href="checkout.html" title="View Cart">
@@ -45,8 +56,8 @@
         <div id="mobile-menu" class="mobile-menu">
             <div class="mobile-menu-inner">
                 <a href="/">Home</a>
-                <a href="/products">Products</a>
-                <a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a>
+                <a href="../../products">Products</a>
+                <a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a>
                 <a href="https://family1st.io/blogs/">Blog</a>
                 <a href="https://family1st.io/faq">FAQ</a>
                 <a class="btn btn-primary" href="checkout.html">Cart <span id="mobile-cart-count" class="cart-count-inline">0</span></a>
@@ -60,7 +71,7 @@
                 <ol class="breadcrumb-list">
                     <li><a href="/">Home</a></li>
                     <li aria-hidden="true">/</li>
-                    <li><a href="/products">GPS Trackers</a></li>
+                    <li><a href="../../products">GPS Trackers</a></li>
                     <li aria-hidden="true">/</li>
                     <li class="breadcrumb-current">Checkout</li>
                 </ol>
@@ -316,7 +327,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="../../products">Products</a></li>
-                        <li><a href="https://family1st.io/gpsactivation_test_activation/">Pricing</a></li>
+                        <li><a href="https://family1st.io/gpsactivation-new_test_v2/">Pricing</a></li>
                         <li><a href="https://family1st.io/blogs/">Blog</a></li>
                         <li><a href="https://family1st.io/faq">FAQ</a></li>
                         <li><a href="#" rel="noopener noreferrer">Shop</a></li>
@@ -365,10 +376,21 @@
         var checkoutGrid  = document.getElementById('checkout-grid');
         var fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 });
 
-        // Fallback product images in case localStorage items are missing the image field
-        var productImages = {
-            'plug-in-obd-tracker': 'https://go.family1st.io/cdn/shop/files/ProductImage_596x_crop_center_a32a6195-e75b-4ef3-9efe-0b8ca96fc82a.webp?v=1740512507'
-        };
+        function escapeAttr(str) {
+            return String(str == null ? '' : str).replace(/"/g, '&quot;');
+        }
+
+        /* Use the image stored in the cart (set dynamically by index.html at add-to-cart time).
+           If it's a relative path (old cart data), convert to absolute so it works from any page. */
+        function resolveLineImage(item) {
+            var src = (item.image || '').trim();
+            if (src && src.indexOf('http') !== 0 && src.indexOf('//') !== 0) {
+                var a = document.createElement('a');
+                a.href = src;
+                return a.href;
+            }
+            return src;
+        }
 
         function getShipping() {
             var checked = document.querySelector('input[name="shipping_method"]:checked');
@@ -398,14 +420,13 @@
             checkoutGrid.style.display = '';
 
             items.forEach(function (item) {
-                var imgSrc = item.image || productImages[item.productId] || '';
                 var div = document.createElement('div');
                 div.className = 'order-product';
                 div.setAttribute('data-product-id', item.productId);
                 div.setAttribute('data-unit-price', item.price);
                 div.innerHTML =
                     '<div class="order-product__image">' +
-                        '<img src="' + imgSrc + '" alt="' + item.name + '" width="120" height="120" decoding="async">' +
+                        '<img src="' + escapeAttr(resolveLineImage(item)) + '" alt="' + escapeAttr(item.name) + '" width="120" height="120" decoding="async">' +
                     '</div>' +
                     '<div class="order-product__info">' +
                         '<h3 class="order-product__name">' + item.name + '</h3>' +
@@ -444,6 +465,11 @@
                 Cart.removeItem(productId);
             }
             renderCart();
+        });
+
+        // ── Shipping method toggle ─────────────────────────────────────
+        document.querySelectorAll('input[name="shipping_method"]').forEach(function (radio) {
+            radio.addEventListener('change', updateSummary);
         });
 
         // ── Mobile menu ────────────────────────────────────────────────
